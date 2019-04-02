@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>News Scraper</title>
+  <style>
+    body {
+      background-color: beige;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    img {
+      height: 200px;
+      width: 200px;
+      margin-right: 0;
+    }
+
+    .card {
+      border-style: groove;
+      margin-bottom: 2%;
+      background-color: rgb(248, 248, 231);
+    }
+
+    #articles {
+      margin-top: 3%
+    }
+
+    #newsColumn {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    p {
+      border-style: groove;
+      float: right;
+      width: 60%;
+      background-color: white;
+      
+    }
+
+    #articles {
+      display: inline-block;
+      overflow: auto;
+      width: 60%;
+      height: 700px;
+    }
+
+    #notes {
+      float: right;
+      width: 30%;
+    }
+
+    textarea,
+    input {
+      display: block;
+      width: 100%;
+    }
+
+    input {
+      height: 36px;
+      font-size: 24px;
+    }
+
+    textarea {
+      height: 200px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="newsColumn">
+    <h1>News Scraper</h1>
+    <div class="row">
+      <a class="nav-link" href="/cbcscrape/" style="color: black">Scrape CBC Website<span class="sr-only"></span></a>
+      <br>
+      <a class="nav-link" href="/nnwscrape/" style="color: black">Scrape National News Watch Website<span
+          class="sr-only"></span></a>
+    </div>
+    <!-- #articles will be populated by the articles once it is all scraped from the news site -->
+    <!-- do this by appending the title and  -->
+    <div id="articles">
+          <h2>Articles</h2>
+        </div>
+      </div>
+
+    </div>
+    <div id="notes" style="margin-top: 5%; margin-right: 5%">
+      <h2>Notes</h2>
+    </div>
+  </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
