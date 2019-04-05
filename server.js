@@ -28,7 +28,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/NewsDatabase", { useNewUrlParser: true });
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/NewsDatabase";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Routes
 
@@ -165,6 +166,15 @@ app.post("/articles/:id", function (req, res) {
       res.jsons(err);
     });
 });
+
+//Route for deleting all articles
+app.delete("/articles/", function (req, res) {
+  db.Article.deleteMany({},function(err) {
+    if (err) return (err);
+    
+  })
+
+})
 
 //Start server
 app.listen(PORT, function() {
